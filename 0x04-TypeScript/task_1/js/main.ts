@@ -10,7 +10,7 @@ interface Teacher {
 
 
 
-//object teacher1
+//object teacher
 const teacher3: Teacher = {
   firstName: 'John',
   fullTimeEmployee: false,
