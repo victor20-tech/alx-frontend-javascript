@@ -9,8 +9,6 @@ interface Teacher {
 }
 
 
-
-//object teacher
 const teacher3: Teacher = {
   firstName: 'John',
   fullTimeEmployee: false,
