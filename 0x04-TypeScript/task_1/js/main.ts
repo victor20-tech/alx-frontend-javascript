@@ -8,7 +8,8 @@ interface Teacher {
   [key: string]: any;
 }
 
-interface Directors extends Teacher {
+//Director interface extending Teacher interface
+interface Director extends Teacher {
   numberOfReports: number;
 }
 
@@ -23,12 +24,12 @@ const teacher3: Teacher = {
   fullTimeEmployee: false,
   lastName: 'Doe',
   location: 'London',
-  contract: false, // This is an additional property allowed by the index signature
+  contract: false, 
 };
 
 console.log(teacher3);
 
-const director1: Directors = {
+const director1: Director = {
   firstName: 'John',
   lastName: 'Doe',
   location: 'London',
