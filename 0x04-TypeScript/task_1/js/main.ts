@@ -39,8 +39,12 @@ const director1: Director = {
 console.log(director1);
 
 // Implement the function
-function printTeacher(firstName: string, lastName: string): string {
-  return `${firstName}. ${lastName}`;
-}
+// function printTeacher(firstName: string, lastName: string): string {
+//   return `${firstName}. ${lastName}`;
+// }
+
+const printTeacher: printTeacherFunction = ({ firstName, lastName }: TeacherName): string => {
+  return `${firstName.charAt(0)}. ${lastName}`;
+};
 
 console.log(printTeacher("John", "Doe"));
