@@ -18,9 +18,14 @@ interface Director extends Teacher {
 //   (firstName: string, lastName: string): string;
 // }
 
+// interface printTeacherFunction {
+//   (teacher: Teacher): string;
+// }
+
 interface printTeacherFunction {
-  (teacher: Teacher): string;
+  (firstName: string, lastName: string): string;
 }
+
 const teacher3: Teacher = {
   firstName: "John",
   fullTimeEmployee: false,
@@ -46,8 +51,12 @@ console.log(director1);
 //   return `${firstName.charAt(0)}. ${lastName}`;
 // };
 
-const printTeacher: printTeacherFunction = ({ firstName, lastName }: Teacher): string => {
-  return `${firstName.charAt(0)}. ${lastName}`;
-};
+// const printTeacher: printTeacherFunction = ({ firstName, lastName }: Teacher): string => {
+//   return `${firstName.charAt(0)}. ${lastName}`;
+// };
+
+function printTeacher(firstName: string, lastName: string): string {
+  return `${firstName}. ${lastName}`;
+}
 
 console.log(printTeacher("John", "Doe"));
