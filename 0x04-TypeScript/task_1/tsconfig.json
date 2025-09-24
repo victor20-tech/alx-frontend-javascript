@@ -3,10 +3,10 @@
     "outDir": "./dist/",
     "sourceMap": true,
     "noImplicitAny": true,
-    "module": "es6",
+    "module": "nodenext",
     "target": "es5",
     "allowJs": true,
-    "moduleResolution": "node",
+    "moduleResolution": "nodenext",
         "skipLibCheck": true
   }
 }
