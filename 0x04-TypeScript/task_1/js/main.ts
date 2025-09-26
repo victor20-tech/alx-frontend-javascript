@@ -49,16 +49,4 @@ const teacherInfo = { firstName: "Joe", lastName: "Doe" };
 const result = printTeacher(teacherInfo);
 console.log(result)
 
-// // print teacher function interface
-// interface printTeacherFunction {
-//   (firstName: string, lastName: string): string;
-// }
 
-
-// // Function implementation  
-// function printTeacher(firstName, lastName): string {
-//   return `${firstName}. ${lastName}`;
-// }
-
-// const result = printTeacher("Joe", "Doe");
-// console.log(result); // 
