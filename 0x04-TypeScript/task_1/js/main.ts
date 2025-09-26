@@ -32,23 +32,30 @@ interface Director extends Teacher {
 
 //Director object implementation
 const director1: Director = {
-  firstName: "John",
+  firstName: "Jane",
   lastName: "Doe",
-  location: "London",
+  location: "New York",
   fullTimeEmployee: true,
   numberOfReports: 17,
 };
 console.log(director1);
 
+// Teacher name interface
+interface TeacherName {
+  firstName: string;
+  lastName: string;
+}
 
 // print teacher function interface
-interface printTeacherFunction {
+interface printTeacherFunction  {
   (firstName: string, lastName: string): string;
 }
 
-function printTeacher(firstName: string, lastName: string): string {
-  return `${firstName}. ${lastName}`;
+function printTeacher({firstName, lastName}: TeacherName): string {
+  return `${firstName[0]}. ${lastName}`;
 }
 
-//use the function
-console.log(printTeacher({ firstName: "John", lastName: "Doe" }));
+const teacherInfo = { firstName: "Alice", lastName: "Wonder" }
+const result = printTeacher(teacherInfo);
+console.log(result);
+
