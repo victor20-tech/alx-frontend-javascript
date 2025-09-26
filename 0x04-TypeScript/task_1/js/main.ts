@@ -41,21 +41,26 @@ const director1: Director = {
 console.log(director1);
 
 // Teacher name interface
-interface TeacherName {
-  firstName: string;
-  lastName: string;
-}
+// interface TeacherName {
+//   firstName: string;
+//   lastName: string;
+// }
 
 // print teacher function interface
 interface printTeacherFunction  {
   (firstName: string, lastName: string): string;
 }
 
-function printTeacher({firstName, lastName}: TeacherName): string {
+// function printTeacher({firstName: string, lastName: string}: string): string {
+//   return `${firstName[0]}. ${lastName}`;
+// }
+
+function printTeacher(firstName: string, lastName: string): string {
   return `${firstName[0]}. ${lastName}`;
 }
 
-const teacherInfo = { firstName: "Alice", lastName: "Wonder" }
-const result = printTeacher(teacherInfo);
-console.log(result);
-
+// const teacherInfo = { firstName: "Alice", lastName: "Wonder" }
+// const result = printTeacher(teacherInfo);
+// console.log(result);
+const result = printTeacher("John", "Doe");
+console.log(result); 
