@@ -8,15 +8,7 @@ interface Teacher {
   [key: string]: any;
 }
 
-//Director interface extending Teacher interface
-interface Director extends Teacher {
-  numberOfReports: number;
-}
-
-interface printTeacherFunction {
-  (firstName: string, lastName: string): string;
-}
-
+//Teacher object implementations
 const teacher3: Teacher = {
   firstName: "John",
   fullTimeEmployee: false,
@@ -24,7 +16,7 @@ const teacher3: Teacher = {
   location: "London",
   contract: false,
 };
-
+//print teacher3
 console.log(teacher3);
 
 
@@ -33,7 +25,12 @@ interface Director extends Teacher {
   numberOfReports: number;
 }
 
-//implementation
+//Director interface extending Teacher interface
+interface Director extends Teacher {
+  numberOfReports: number;
+}
+
+//Director object implementation
 const director1: Director = {
   firstName: "John",
   lastName: "Doe",
@@ -48,9 +45,10 @@ console.log(director1);
 interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
-const printTeacher: printTeacherFunction = (firstName, lastName) =>{
-  `${firstName.charAt(0).toUpperCase()}. ${lastName}`;  return `${firstName}. ${lastName}`;
+
+function printTeacher(firstName: string, lastName: string): string {
+  return `${firstName.charAt(0).toUpperCase()}. ${lastName}`;
 }
 
 //use the function
-console.log(printTeacher("John", "Doe"));
+console.log(printTeacher({ firstName: "John", lastName: "Doe" }));
