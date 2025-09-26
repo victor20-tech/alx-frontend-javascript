@@ -48,10 +48,8 @@ console.log(director1);
 interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
-
-
-function printTeacher(firstName: string, lastName: string): string {
-  return `${firstName}. ${lastName}`;
+const printTeacher: printTeacherFunction = (firstName, lastName) =>{
+  `${firstName.charAt(0).toUpperCase()}. ${lastName}`;  return `${firstName}. ${lastName}`;
 }
 
 //use the function
