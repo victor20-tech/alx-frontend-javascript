@@ -47,7 +47,7 @@ interface printTeacherFunction {
 }
 
 function printTeacher(firstName: string, lastName: string): string {
-  return `${firstName.charAt(0).toUpperCase()}. ${lastName}`;
+  return `${firstName}. ${lastName}`;
 }
 
 //use the function
