@@ -1,7 +1,3 @@
-// ===============================================
-// Final Cleaned and Error-Free Code
-// ===============================================
-
 // Teacher interface
 interface Teacher {
   readonly firstName: string;
