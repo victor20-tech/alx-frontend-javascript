@@ -8,7 +8,15 @@ interface Teacher {
   [key: string]: any;
 }
 
-//implementation
+//Director interface extending Teacher interface
+interface Director extends Teacher {
+  numberOfReports: number;
+}
+
+interface printTeacherFunction {
+  (firstName: string, lastName: string): string;
+}
+
 const teacher3: Teacher = {
   firstName: "John",
   fullTimeEmployee: false,
@@ -41,7 +49,7 @@ interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
 
-// Implement the function
+
 function printTeacher(firstName: string, lastName: string): string {
   return `${firstName}. ${lastName}`;
 }
