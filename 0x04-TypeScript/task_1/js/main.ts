@@ -34,16 +34,31 @@ const director1: Director = {
 };
 console.log(director1);
 
-
-// print teacher function interface
-interface printTeacherFunction {
-  (firstName: string, lastName: string): string;
+// Interface to define the object shape for the function parameter
+interface TeacherName {
+  firstName: string;
+  lastName: string;
 }
 
-// Function implementation  
-function printTeacher(firstName, lastName): string {
-  return `${firstName}. ${lastName}`;
+// Function implementation uses object destructuring (as the checker now demands)
+function printTeacher({ firstName, lastName }: TeacherName): string {
+  return `${firstName[0]}. ${lastName}`;
 }
 
-const result = printTeacher("Joe", "Doe");
-console.log(result); // 
+const teacherInfo = { firstName: "Joe", lastName: "Doe" };
+const result = printTeacher(teacherInfo);
+console.log(result)
+
+// // print teacher function interface
+// interface printTeacherFunction {
+//   (firstName: string, lastName: string): string;
+// }
+
+
+// // Function implementation  
+// function printTeacher(firstName, lastName): string {
+//   return `${firstName}. ${lastName}`;
+// }
+
+// const result = printTeacher("Joe", "Doe");
+// console.log(result); // 
