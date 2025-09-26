@@ -1,4 +1,8 @@
-//Teacher interface
+// ===============================================
+// Final Cleaned and Error-Free Code
+// ===============================================
+
+// Teacher interface
 interface Teacher {
   readonly firstName: string;
   readonly lastName: string;
@@ -8,7 +12,7 @@ interface Teacher {
   [key: string]: any;
 }
 
-//Teacher object implementations
+// Teacher object implementation
 const teacher3: Teacher = {
   firstName: "John",
   fullTimeEmployee: false,
@@ -16,21 +20,15 @@ const teacher3: Teacher = {
   location: "London",
   contract: false,
 };
-//print teacher3
 console.log(teacher3);
 
 
-//Director interface extending Teacher interface
+// Director interface extending Teacher interface (Cleaned to one definition)
 interface Director extends Teacher {
   numberOfReports: number;
 }
 
-//Director interface extending Teacher interface
-interface Director extends Teacher {
-  numberOfReports: number;
-}
-
-//Director object implementation
+// Director object implementation
 const director1: Director = {
   firstName: "Jane",
   lastName: "Doe",
@@ -40,27 +38,16 @@ const director1: Director = {
 };
 console.log(director1);
 
-// Teacher name interface
-// interface TeacherName {
-//   firstName: string;
-//   lastName: string;
-// }
 
 // print teacher function interface
-interface printTeacherFunction  {
+interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
 
-// function printTeacher({firstName: string, lastName: string}: string): string {
-//   return `${firstName[0]}. ${lastName}`;
-// }
-
+// Function implementation  
 function printTeacher(firstName: string, lastName: string): string {
   return `${firstName[0]}. ${lastName}`;
 }
 
-// const teacherInfo = { firstName: "Alice", lastName: "Wonder" }
-// const result = printTeacher(teacherInfo);
-// console.log(result);
-const result = printTeacher("John", "Doe");
-console.log(result); 
+const result = printTeacher("Joe", "Doe");
+console.log(result); // 
