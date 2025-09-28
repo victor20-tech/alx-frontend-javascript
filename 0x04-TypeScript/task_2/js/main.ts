@@ -68,3 +68,21 @@ function createEmployee(salary: number | string): Employee {
 console.log(createEmployee(200));
 console.log(createEmployee(1000));
 console.log(createEmployee('$500'));
+
+
+//String literal type
+type Subjects = 'Math' | 'History';
+
+// function that uses the type
+function teachClass(todayClass: Subjects): string {
+  if (todayClass === 'Math') {
+    return 'Teaching Math';
+  }
+  return 'Teaching History';
+}
+
+console.log("Testing teachClass with 'Math':");
+console.log(teachClass('Math')); 
+
+console.log("\nTesting teachClass with 'History':");
+console.log(teachClass('History')); 
