@@ -8,7 +8,7 @@ import { RowID, RowElement } from './interface';
  * Inserts a new row and returns its ID.
  * @param row The data for the new row.
  */
-export declare function insertRow(row: RowElement): RowID;
+export declare function insertRow(row: RowElement): number;
 
 /**
  * Deletes a row by its ID.
