@@ -47,15 +47,6 @@ class Teacher implements TeacherInterface {
 type Employee = Director | Teacher;
 
 
-// Create and return an instance of Director or Teacher based on salary.
-// function createEmployee(salary: number | string): Employee {
-//   if (typeof salary === 'number' && salary < 500) {
-//     return new Teacher();
-//   } else {
-//     return new Director();
-//   }
-// }
-
 function createEmployee(salary: number | string): Employee {
   if (typeof salary === 'number') {
     if (salary < 500) { 
@@ -74,7 +65,7 @@ console.log(createEmployee('$500'));
 type Subjects = 'Math' | 'History';
 
 // function that uses the type
-function teachClass(todayClass: Subjects): string {
+function teachClass(todayClass:Subjects): string {
   if (todayClass === 'Math') {
     return 'Teaching Math';
   }
