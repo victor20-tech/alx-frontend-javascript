@@ -15,10 +15,7 @@ const newRowID: RowID = CRUD.insertRow(row);
 console.log(`Inserted row with ID: ${newRowID}`);
 
 //Create const updatedRow: RowElement that adds age: 23
-const updatedRow: RowElement = {
-  ...row, 
-  age: 23, 
-};
+const updatedRow: RowElement = {...row, age: 23 };
 
 //Call CRUD.updateRow(newRowID, updatedRow);
 CRUD.updateRow(newRowID, updatedRow);
